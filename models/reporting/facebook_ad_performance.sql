@@ -31,6 +31,6 @@ purchases,
 revenue,
 add_payment_info,
 landing_page_view as landing_page_views,
-"offsite_conversion.fb_pixel_custom.typeformsubmit" as typeform_submissions,
-"offsite_conversion.fb_pixel_custom.typeformfirstinteraction" as typeform_clicked
+CASE WHEN date >= '2023-10-23' THEN "offsite_conversion.fb_pixel_custom.typeformsubmit" END as typeform_submissions,
+CASE WHEN date >= '2023-10-23' THEN "offsite_conversion.fb_pixel_custom.typeformfirstinteraction" END as typeform_clicked
 FROM {{ ref('facebook_performance_by_ad') }}
