@@ -17,8 +17,5 @@ engaged_sessions,
 bounce_rate,
 session_duration,
 bounced_sessions,
-purchase_value,
-conversions,
-total_revenue,
 purchase
 FROM {{ ref('ga4_performance_by_city') }}
